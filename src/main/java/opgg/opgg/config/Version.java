@@ -20,7 +20,7 @@ public class Version {
     public static void version() {
         BufferedReader bufferedReader = null;
         try{
-            String urlStr = "https://ddragon.leagueoflegends.com/realms/kr.json";
+            String urlStr = "";
             URL url = new URL(urlStr);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");

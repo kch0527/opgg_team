@@ -14,7 +14,7 @@ import java.io.BufferedReader;
 
 @Controller
 public class UserController {
-    final static String API_KEY = "RGAPI-520f99f7-0f5a-4dbc-9971-48f5838e4213";
+    final static String API_KEY = "";
 
     @RequestMapping(value="/search", method= RequestMethod.GET)
     public String searchUser(HttpServletRequest httpServletRequest, Model model){
