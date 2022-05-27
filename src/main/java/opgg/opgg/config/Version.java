@@ -30,7 +30,7 @@ public class Version {
             while((line = bufferedReader.readLine()) != null) {
                 result = result + line;
             }
-            // ~2022.05.20
+            // ~2022.05.27
         }
         catch(Exception e){
             System.out.println(e.getMessage());
