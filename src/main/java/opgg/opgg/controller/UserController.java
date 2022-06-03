@@ -14,7 +14,7 @@ import java.io.BufferedReader;
 
 @Controller
 public class UserController {
-    final static String API_KEY = "";
+    final static String API_KEY = "입력 커밋 금지";
 
     @RequestMapping(value="/search", method= RequestMethod.GET)
     public String searchUser(HttpServletRequest httpServletRequest, Model model){
