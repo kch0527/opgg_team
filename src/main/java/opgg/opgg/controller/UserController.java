@@ -3,6 +3,7 @@ package opgg.opgg.controller;
 
 import opgg.opgg.config.Version;
 import opgg.opgg.dto.User;
+import opgg.opgg.dto.UserInfo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,18 +11,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 
 @Controller
 public class UserController {
     final static String API_KEY = "입력 커밋 금지";
-
     @RequestMapping(value="/search", method= RequestMethod.GET)
     public String searchUser(HttpServletRequest httpServletRequest, Model model){
         Version.version();
         BufferedReader bufferedReader = null;
         User temporary = null;
-        LeagueEntrydto[] leagueInfo = null;
+        UserInfo[] leagueInfo = null;
         try{
             String urlstr = "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/"+
                     SummonerName.replace(" ", "")		+"?api_key="+API_KEY;
