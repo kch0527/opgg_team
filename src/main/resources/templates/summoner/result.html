@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>타이틀</title>
+</head>
+<body>
+
+    <div th:replace="fragments/header :: headerfrag"/>
+
+    <div>
+        <h2>찾은 사람의 정보는</h2>
+        <p th:text = "${summoner}"></p>
+
+        <p>소환사 이름</p>
+        <p th:text = "${summoner.getName()}"></p>
+        <p>소환사 레벨</p>
+        <p th:text = "${summoner.getSummonerLevel()}"></p>
+        <p>아이콘</p>
+        <img alt="아이콘" th:src="${imgURL}">
+
+    </div>
+
+    <div>
+        <h2>찾은 사람의 정보는</h2>
+        <p th:text = "${leagueEntry}"></p>
+
+        <p>랭크</p>
+        <p th:text = "${leagueEntry.getRank()}"></p>
+        <p>티어</p>
+        <p th:text = "${leagueEntry.getTier()}"></p>
+        <p>점수</p>
+        <p th:text = "${leagueEntry.getLeaguePoints()}"></p>
+        <p>승</p>
+        <p th:text = "${leagueEntry.getWins()}"></p>
+        <p>패</p>
+        <p th:text = "${leagueEntry.getLosses()}"></p>
+    </div>
+
+
+    <div th:replace="fragments/footer :: footerfrag"/>
+</body>
+</html>

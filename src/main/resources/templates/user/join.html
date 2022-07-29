@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="card">
+    <div class="card-body register-card-body">
+        <p class="login-box-msg">회원 등록</p>
+
+
+        <form th:action="@{'/auth/joinProc'}" th:object="${user}" th:method="POST">
+
+            <div class="input-group mb-3">
+                <input type="text" name="username" class="form-control" placeholder="username">
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" name="password" class="form-control" placeholder="pw">
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" name="nickname" class="form-control" placeholder="name">
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" name="email" class="form-control" placeholder="email">
+            </div>
+
+            <!-- /.col -->
+            <div class="col-4">
+                <input type="submit" value="Register">
+            </div>
+            <!-- /.col -->
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
