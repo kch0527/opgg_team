@@ -17,7 +17,7 @@ public class CustomUserDetails implements UserDetails {
 
     private final User user;
 
-    //유저의 권한목록
+    //유저의 권한목록 어쩌라고 현제야
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Collection<GrantedAuthority> collectors = new ArrayList<>();
